@@ -1,0 +1,19 @@
+﻿<ImageGroupContainer xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <ID>64033b63-4e2f-440e-a7c4-b43b6f4c9b0b</ID>
+  <ImageGroups>
+    <CollectionContent />
+    <ID>6bd1ff88-2f18-4623-9550-9aaf9608ccd1</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>ImageGroupCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ImageGroupCollection/6bd1ff88-2f18-4623-9550-9aaf9608ccd1</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </ImageGroups>
+  <MasterETag i:nil="true" />
+  <Name>ImageGroupContainer</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ImageGroupContainer/ImageGroups</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</ImageGroupContainer>

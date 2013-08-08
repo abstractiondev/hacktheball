@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="WebStorm built-in server" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+  <configuration default="false" name="Chrome Debug mainpage" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
     <JSRemoteDebuggerConfigurationSettings>
-      <option name="engineId" value="firefox" />
-      <option name="fileUrl" value="http://localhost:63342/hacktheball/UI/hacktheball/www-public/index.html" />
+      <option name="engineId" value="chrome" />
+      <option name="fileUrl" value="http://localhost:63342/hacktheballweb/UI/hacktheballwebsite/html/index.html" />
     </JSRemoteDebuggerConfigurationSettings>
     <RunnerSettings RunnerId="JavascriptDebugRunner" />
     <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />

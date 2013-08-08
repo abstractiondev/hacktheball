@@ -1,0 +1,11 @@
+﻿<ImageGroupCollection xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <CollectionContent />
+  <ID>87e2bb2a-8479-4bb4-8ff2-9b0e4e023fcd</ID>
+  <IsCollectionFiltered>false</IsCollectionFiltered>
+  <MasterETag i:nil="true" />
+  <Name>ImageGroupCollection</Name>
+  <OrderFilterIDList xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ImageGroupCollection/MasterCollection</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</ImageGroupCollection>

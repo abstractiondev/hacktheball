@@ -1,13 +1,370 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<!-- THEBALL-CONTEXT-ROOT-BEGIN:AaltoGlobalImpact.OIP.NodeSummaryContainer -->
+
+
+<!-- THEBALL-CONTEXT-END:* -->
 <head>
 	<meta charset="utf-8">
-	<title>Initial test Page</title>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Weconomy">
+	<meta name="author" content="Weconomy">
+
+<!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/protonit-style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+    <link href="../assets/css/protonit-responsive.css" rel="stylesheet">
+
+
+	<link href="../assets/css/leaflet.css" rel="stylesheet"/>
+<!-- get a fresh copy live at 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />-->
+	<link rel="stylesheet" href="../assets/css/MarkerCluster.Default.css" />
+	<!--[if lte IE 8]>
+        <link href="../assets/css/leaflet.css" rel="stylesheet"/>
+		<link href="../assets/css/MarkerCluster.Default.ie.css" rel="stylesheet" />
+	<![endif]-->
+
+<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="../assets/img/icons/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/img/icons/favicon-OIP-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/img/icons/favicon-OIP-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/img/icons/favicon-OIP-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/img/icons/favicon-OIP-57x57.png">
+
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- other javascript -->
+    <!--<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet"> -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <!-- or get a fresh copy at <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+	<script src="../assets/js/jquery.form.js"></script>
+	<!-- get a fresh live version from <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>-->
+	<script src="../assets/js/leaflet.js"></script>
+	<script src="../assets/js/leaflet.markercluster.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+
+    <!-- Markdown on browser -->
+    <link rel="stylesheet" href="../assets/lib/markdowndeep/mdd_styles.css">
+    <script type="text/javascript" src="../assets/lib/markdowndeep/MarkdownDeepLib.min.js"></script>
+
 </head>
 
-<body>
-<p>Hello from empty template!</p>
-<p>Hacking on live testing...</p>
-<p></p>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<script src="../assets/js/dust-core-1.2.3.min.js"></script>
+<script src="nodetiles_dust.js"></script>
+<script src="textcontent_detailpane_dust.js"></script>
+<script src="../assets/js/xml2json.js"></script>
+
+<div class="subnavbar">
+    <div class="logo-background">
+        <img src="../assets/img/HackTheHackathon_Logo.jpg">
+    </div>
+    <div class="subnavbar-inner">
+        <div class="container">
+        </div>
+    </div>
+    <div class="container powered-by">
+        <h3>powered by <a href="http://www.caloom.org">Caloom</a></h3>
+    </div>
+</div>
+
+
+<script>
+    function GetLayerLabelText(textvalue, iconUrl)
+    {
+        if(iconUrl != null)
+            return "<img src='" + iconUrl + "' height='16' width='16'></img> " + textvalue;
+        return textvalue;
+    }
+
+    $(function() {
+        OipSetupDefaultMap = function(mapid, isMiniMap) {
+			if(isMiniMap == null)
+				isMiniMap = true;
+			var showcredit = isMiniMap == false;
+			var showlayers = isMiniMap == false;
+			var enableWheelScroll = isMiniMap == false;
+			var zoomControl = isMiniMap == false;
+			var initialZoomLevel = isMiniMap ? 0 : 2;
+			var mapOptions = { };
+			mapOptions["scrollWheelZoom"] = enableWheelScroll;
+			mapOptions["zoomControl"] = zoomControl;
+
+            var map = L.map(mapid, mapOptions).setView([0, 0], initialZoomLevel);
+
+            // add an OpenStreetMap tile layer
+            var tileUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+            var tileAttribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
+			if(showcredit == true) 
+			{
+				L.tileLayer(tileUrl, {
+					attribution: tileAttribution
+				}).addTo(map);
+			} else {
+				L.tileLayer(tileUrl, { }).addTo(map);
+			}
+
+            // Marker arrays
+            var ActivitiesMarkers = new Array();
+            var ActivitiesMarkerIcon;
+            var NewsMarkers = new Array();
+            var NewsMarkerIcon;
+            var ProjectsMarkers = new Array();
+            var ProjectsMarkerIcon;
+            var EventsMarkers = new Array();
+            var EventsMarkerIcon;
+            var BlogsMarkers = new Array();
+            var BlogsMarkerIcon;
+
+            // Cluster markers - only thing that has actual map-visible markers
+            var markers = new L.MarkerClusterGroup();
+
+            // Layers (empty per themselves, but control the toggling)
+	
+            var ActivitiesLayer = L.layerGroup();
+            ActivitiesLayer.addTo(map);
+            var NewsLayer = L.layerGroup();
+            NewsLayer.addTo(map);
+            var ProjectsLayer = L.layerGroup();
+            ProjectsLayer.addTo(map);
+            var EventsLayer = L.layerGroup();
+            EventsLayer.addTo(map);
+            var BlogsLayer = L.layerGroup();
+            BlogsLayer.addTo(map);
+
+            {
+                var myIcon = L.icon({
+                    iconUrl: '[!ATOM]IconUrl[ATOM!]',
+                    //iconRetinaUrl: 'my-icon@2x.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 40],
+                    popupAnchor: [-3, -76],
+                    shadowUrl: '../oip-additions/oip-assets/oip-images/oip-markers/marker-shadow.png',
+                    // shadowRetinaUrl: 'my-icon-shadow@2x.png',
+                    shadowSize: [41, 41],
+                    shadowAnchor: [12, 40]
+                });
+
+                /*
+                var myMarker = L.marker([[!ATOM]LocationText[ATOM!]], {icon: myIcon })
+            .bindPopup('<h2>[!ATOM]PopupTitle[ATOM!]</h2><br>[!ATOM]PopupContent[ATOM!]');
+                [!ATOM]CategoryName[ATOM!]Markers.push(myMarker);
+                [!ATOM]CategoryName[ATOM!]MarkerIcon = "[!ATOM]IconUrl[ATOM!]";*/
+            }
+
+            var activitiesText = GetLayerLabelText("Activities", ActivitiesMarkerIcon);
+            var newsText = GetLayerLabelText("News", NewsMarkerIcon);
+            var projectsText = GetLayerLabelText("Projects", ProjectsMarkerIcon);
+            var eventsText = GetLayerLabelText("Events", EventsMarkerIcon);
+            var blogsText = GetLayerLabelText("Blogs", BlogsMarkerIcon);
+
+            var overlayMaps = { };
+			if(showlayers == true) {
+				overlayMaps[activitiesText] = ActivitiesLayer;
+				overlayMaps[newsText] = NewsLayer;
+				overlayMaps[projectsText] = ProjectsLayer;
+				overlayMaps[eventsText] = EventsLayer;
+				overlayMaps[blogsText] = BlogsLayer;
+			}
+
+
+            // Adding marker arrays 
+            markers.addLayers(ActivitiesMarkers);
+            markers.addLayers(NewsMarkers);
+            markers.addLayers(ProjectsMarkers);
+            markers.addLayers(EventsMarkers);
+            markers.addLayers(BlogsMarkers);
+	
+            map.addLayer(markers);
+            markers.addTo(map);
+	
+            map.on("layeradd", function(e) {
+                if(e.layer == ActivitiesLayer)
+                    markers.addLayers(ActivitiesMarkers);
+                if(e.layer == NewsLayer)
+                    markers.addLayers(NewsMarkers);
+                if(e.layer == ProjectsLayer)
+                    markers.addLayers(ProjectsMarkers);
+                if(e.layer == EventsLayer)
+                    markers.addLayers(EventsMarkers);
+                if(e.layer == BlogsLayer)
+                    markers.addLayers(BlogsMarkers);
+            });
+            map.on("layerremove", function(e) {
+                if(e.layer == ActivitiesLayer)
+                    markers.removeLayers(ActivitiesMarkers);
+                if(e.layer == NewsLayer)
+                    markers.removeLayers(NewsMarkers);
+                if(e.layer == ProjectsLayer)
+                    markers.removeLayers(ProjectsMarkers);
+                if(e.layer == EventsLayer)
+                    markers.removeLayers(EventsMarkers);
+                if(e.layer == BlogsLayer)
+                    markers.removeLayers(BlogsMarkers);
+            });
+			if(showlayers == true)
+				L.control.layers(null, overlayMaps).addTo(map);
+			map.invalidateSize(false);
+        };
+        /*OipSetupDefaultMap('map');*/
+    });
+
+</script> 
+
+<!-- start reading-pane -->
+<div id="SelectedContentContainer" class="container reading-pane">
+</div>
+<!-- end reading-pane -->
+
+<div class="container masonry" id="TileSection">
+            Loading...
+</div>
+<script type="text/javascript">
+
+	$(function() {
+		OipCloseDetailPane = function() {
+			$("#SelectedContentContainer").html('');
+		};
+		$(".oipmenuselector").on("click", function() {
+			var filterName = $(this).data("filtername");
+			var navigateto = $(this).data("locateto");
+			//alert(navigateto);
+			//var scrollPos = $(navigateto).offset().top;
+			//$(document).animate({ scrollTop : $(navigateto).offset().top}, 'slow');
+			//$(document).scrollTop($(navigateto).offset().top);
+			OipCloseDetailPane();
+			$("a[data-filter='" + filterName + "']").trigger('click');
+			$('[data-toggle="dropdown"]').parent().removeClass('open');
+			return true;
+		});
+
+        OipShowHtmlInDetailPaneWithClose = function(htmlContent) {
+			$("#SelectedContentContainer").html('<button id="paneclosebutton" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>' +
+				htmlContent + '</div>' + '</div>' );
+			$("#paneclosebutton").off("click");
+			$("#paneclosebutton").click(OipCloseDetailPane);
+		};
+        OipShowTextContentInDetailPaneWithClose = function(textContentObject) {
+            dust.render("textcontent_detailpane.dust", textContentObject, function (err, out) {
+                $("#SelectedContentContainer").html('<button id="paneclosebutton" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>' +
+                        out + '</div>' + '</div>' );
+                $("#paneclosebutton").off("click");
+                $("#paneclosebutton").click(OipCloseDetailPane);
+            });
+        };
+	});
+
+    $(function () {
+        $.get("../../AaltoGlobalImpact.OIP/NodeSummaryContainer/default.json", function (jsonObject) {
+            /*
+            var dom;
+            if (window.DOMParser) {
+                parser = new DOMParser();
+                dom = parser.parseFromString(responseXml, "text/xml");
+            }
+            else // Internet Explorer
+            {
+                dom = new ActiveXObject("Microsoft.XMLDOM");
+                dom.async = false;
+                dom.loadXML(responseXml);
+            }
+            var json = xml2json(dom, "  ");
+            //alert(json);
+            var myObj = jQuery.parseJSON(json);
+            */
+            var myObj = jsonObject;
+            dust.render("nodetiles.dust", myObj, function (err, out) {
+                $("#TileSection").html(out);
+            });
+        });
+    });
+</script>
+
+<div class="container clearfix">
+    <section class="well">
+        <!-- '../oip-containers/oip-container-contact-oip.txt' --><!-- UseInformationObjectAsRoot:AaltoGlobalImpact.OIP.ContactOipContainer  -->
+    </section>
+</div>
+<footer class="footer">
+    <div class="container"><div class="span12">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+    </div>
+        <div class="span4">
+            <p>Caloom Platform is offered to you by Caloom Oy. The Caloom Platform is developed side-by-side with Aalto Global Impact's Open Innovation Platform.</p>
+        </div>
+        <div class="span4">
+            <p>Aalto Global Impact has been formed to bring together these existing parties working in societal issues and to help them develop their activities further</p>
+        </div>
+        <div class="span3">
+            <p>The Open Innovation Platform is offered to you by Aalto Global Impact, and Aalto University organisation</p>
+            <p>All content licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p>Icons from <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </div>
+</footer>
+<!-- end oip-modal-collection.txt -->
+<!-- ========== End: www-public\..\oip-containers\../oip-modals/oip-modal-collection.txt ========== -->
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-transition.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-alert.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-modal.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-dropdown.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-tab.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-tooltip.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-popover.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-button.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-collapse.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-carousel.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-typeahead.js"></script>
+
+<!-- OIP specific -->
+<script src="../assets/js/modal-id-actions.js"></script>
 </body>
+
+<script type="text/javascript">
+
+    String.prototype.replaceAll = function(strReplace, strWith) {
+        var reg = new RegExp(strReplace, 'ig');
+        return this.replace(reg, strWith);
+    };
+
+    OipOpenArticle = function(urlarg) {
+        var targeturl = $(this).data('contenturl');
+        if (targeturl == null)
+            targeturl = urlarg;
+        else
+            targeturl = "../" + targeturl;
+        if (targeturl == null) {
+            return;
+        }
+        $.ajax({
+            url: targeturl,
+            cache: false,
+            success: function (jsonContent) {
+                var markdown = new MarkdownDeep.Markdown();
+                markdown.SafeMode = true;
+                if(jsonContent.Body == undefined)
+                    jsonContent.Body = "";
+                var rendered = markdown.Transform(jsonContent.Body.replaceAll("javascript:", ""));
+                jsonContent.BodyRendered = rendered;
+                OipShowTextContentInDetailPaneWithClose(jsonContent);
+                $(document).scrollTop(0);
+            }
+        });
+        return true;
+    };
+
+</script>
+
 </html>
 

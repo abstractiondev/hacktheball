@@ -105,7 +105,7 @@
             <li>
                 <form>
                     <i class="icon-bookmark"></i>
-                    <input class="text" name="share_url" value="http://www.aaltoglobalimpact.org/www-public/oip-layout-landing.html?">
+                    <input class="text" name="share_url" value="">
                 </form>
             </li>
         </ul>

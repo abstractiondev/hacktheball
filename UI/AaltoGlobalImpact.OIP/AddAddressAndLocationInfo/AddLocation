@@ -1,0 +1,9 @@
+﻿<AddAddressAndLocationInfo xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <ID>f7fedaec-ed7c-4cb8-b619-027b10115342</ID>
+  <LocationName i:nil="true" />
+  <MasterETag i:nil="true" />
+  <Name>AddAddressAndLocationInfo</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/AddAddressAndLocationInfo/AddLocation</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</AddAddressAndLocationInfo>

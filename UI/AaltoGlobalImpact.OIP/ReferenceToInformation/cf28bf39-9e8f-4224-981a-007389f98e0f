@@ -1,0 +1,10 @@
+﻿<ReferenceToInformation xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <ID>cf28bf39-9e8f-4224-981a-007389f98e0f</ID>
+  <MasterETag i:nil="true" />
+  <Name>ReferenceToInformation</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ReferenceToInformation/cf28bf39-9e8f-4224-981a-007389f98e0f</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  <Title>About</Title>
+  <URL>AaltoGlobalImpact.OIP.Category_405244be-c71e-4df3-bec9-68910d1e8d20_DefaultView.phtml</URL>
+</ReferenceToInformation>

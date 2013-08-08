@@ -1,0 +1,69 @@
+﻿<AddressAndLocationCollection xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <CollectionContent>
+    <AddressAndLocation>
+      <Address>
+        <Country i:nil="true" />
+        <ID>ecb06237-0c2b-49c1-adba-6c71f33e471f</ID>
+        <MasterETag i:nil="true" />
+        <Name>StreetAddress</Name>
+        <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+        <RelativeLocation>AaltoGlobalImpact.OIP/StreetAddress/ecb06237-0c2b-49c1-adba-6c71f33e471f</RelativeLocation>
+        <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+        <Street i:nil="true" />
+        <Town i:nil="true" />
+        <ZipCode i:nil="true" />
+      </Address>
+      <ID>f966aeac-c958-4b69-828d-a769d4197705</ID>
+      <Location>
+        <ID>47bbfd25-3ba1-4dc1-bca7-c3b42ebb7c05</ID>
+        <Latitude>
+          <ID>2a69ebb5-f9e8-40a5-9946-b1577f0e0647</ID>
+          <MasterETag i:nil="true" />
+          <Name>Latitude</Name>
+          <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+          <RelativeLocation>AaltoGlobalImpact.OIP/Latitude/2a69ebb5-f9e8-40a5-9946-b1577f0e0647</RelativeLocation>
+          <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+          <TextValue>0</TextValue>
+        </Latitude>
+        <LocationName>Cambridge, MA</LocationName>
+        <Longitude>
+          <ID>f2a338d3-566c-4003-9068-088e2877f8d3</ID>
+          <MasterETag i:nil="true" />
+          <Name>Longitude</Name>
+          <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+          <RelativeLocation>AaltoGlobalImpact.OIP/Longitude/f2a338d3-566c-4003-9068-088e2877f8d3</RelativeLocation>
+          <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+          <TextValue>0</TextValue>
+        </Longitude>
+        <MasterETag i:nil="true" />
+        <Name>Location</Name>
+        <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+        <RelativeLocation>AaltoGlobalImpact.OIP/Location/47bbfd25-3ba1-4dc1-bca7-c3b42ebb7c05</RelativeLocation>
+        <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+      </Location>
+      <MasterETag>"0x8D061A2AD681B5D"</MasterETag>
+      <Name>AddressAndLocation</Name>
+      <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+      <ReferenceToInformation>
+        <ID>a133cb89-d665-47bf-8e8e-d37d83af8ee9</ID>
+        <MasterETag>"0x8D061A2AD4E5124"</MasterETag>
+        <Name>ReferenceToInformation</Name>
+        <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+        <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ReferenceToInformation/a133cb89-d665-47bf-8e8e-d37d83af8ee9</RelativeLocation>
+        <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+        <Title>Cambridge, MA</Title>
+        <URL>AaltoGlobalImpact.OIP.AddressAndLocation_f966aeac-c958-4b69-828d-a769d4197705_DefaultView.phtml</URL>
+      </ReferenceToInformation>
+      <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/AddressAndLocation/f966aeac-c958-4b69-828d-a769d4197705</RelativeLocation>
+      <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    </AddressAndLocation>
+  </CollectionContent>
+  <ID>536583c5-f54b-46dc-b18e-444980b05b92</ID>
+  <IsCollectionFiltered>false</IsCollectionFiltered>
+  <MasterETag i:nil="true" />
+  <Name>AddressAndLocationCollection</Name>
+  <OrderFilterIDList xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/AddressAndLocationCollection/MasterCollection</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</AddressAndLocationCollection>

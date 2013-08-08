@@ -1,0 +1,9 @@
+﻿<AddCategoryInfo xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <CategoryName i:nil="true" />
+  <ID>08f52c69-c420-4ce3-bf25-6c074cb94e5f</ID>
+  <MasterETag i:nil="true" />
+  <Name>AddCategoryInfo</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/AddCategoryInfo/AddCategory</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</AddCategoryInfo>

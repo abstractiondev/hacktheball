@@ -1,0 +1,17 @@
+﻿<TextContent xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <Author>Russ Klein</Author>
+  <Body>More Text</Body>
+  <Categories i:nil="true" />
+  <Excerpt>Privacy is important to us</Excerpt>
+  <ID>0d36d3ca-c704-4a96-bf7c-b63934633261</ID>
+  <ImageData i:nil="true" />
+  <Locations i:nil="true" />
+  <MasterETag i:nil="true" />
+  <Name>TextContent</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/TextContent/0d36d3ca-c704-4a96-bf7c-b63934633261</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  <SortOrderNumber>0</SortOrderNumber>
+  <SubTitle />
+  <Title>Your Privacy and Protection</Title>
+</TextContent>

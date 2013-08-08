@@ -1,0 +1,145 @@
+﻿<MapContainer xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <Header>
+    <ID>a3f6c852-48ca-4311-91a3-fe7560df9343</ID>
+    <MasterETag i:nil="true" />
+    <Name>ContainerHeader</Name>
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/ContainerHeader/a3f6c852-48ca-4311-91a3-fe7560df9343</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    <SubTitle i:nil="true" />
+    <Title i:nil="true" />
+  </Header>
+  <ID>d0305c39-9655-4f1b-aff7-2de917aebddb</ID>
+  <MapCollection>
+    <CollectionContent />
+    <ID>baeb8a92-aa0d-4088-ad53-0d929e4cf23c</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>MapCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/MapCollection/baeb8a92-aa0d-4088-ad53-0d929e4cf23c</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MapCollection>
+  <MapFeatured>
+    <ID>a49397cf-11aa-4925-a8bd-2e83f8eb4d69</ID>
+    <MasterETag i:nil="true" />
+    <Name>Map</Name>
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/Map/a49397cf-11aa-4925-a8bd-2e83f8eb4d69</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    <Title i:nil="true" />
+  </MapFeatured>
+  <MapIndexCollection>
+    <ID>3277b9a7-8c2c-4fcb-b975-63c0df5a9b4c</ID>
+    <MapByAuthor>
+      <CollectionContent />
+      <ID>c8720e65-1c25-4ff8-92ae-8bb4a82b632b</ID>
+      <IsCollectionFiltered>false</IsCollectionFiltered>
+      <MasterETag i:nil="true" />
+      <Name>MapCollection</Name>
+      <OrderFilterIDList xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+      <RelativeLocation>AaltoGlobalImpact.OIP/MapCollection/c8720e65-1c25-4ff8-92ae-8bb4a82b632b</RelativeLocation>
+      <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    </MapByAuthor>
+    <MapByCategory>
+      <CollectionContent />
+      <ID>c74d81f3-08ca-49e6-a40c-8c59ac8eba43</ID>
+      <IsCollectionFiltered>false</IsCollectionFiltered>
+      <MasterETag i:nil="true" />
+      <Name>MapCollection</Name>
+      <OrderFilterIDList xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+      <RelativeLocation>AaltoGlobalImpact.OIP/MapCollection/c74d81f3-08ca-49e6-a40c-8c59ac8eba43</RelativeLocation>
+      <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    </MapByCategory>
+    <MapByDate>
+      <CollectionContent />
+      <ID>2e2c0943-5512-49c1-8f4a-c7ead9425458</ID>
+      <IsCollectionFiltered>false</IsCollectionFiltered>
+      <MasterETag i:nil="true" />
+      <Name>MapCollection</Name>
+      <OrderFilterIDList xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+      <RelativeLocation>AaltoGlobalImpact.OIP/MapCollection/2e2c0943-5512-49c1-8f4a-c7ead9425458</RelativeLocation>
+      <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    </MapByDate>
+    <MapByLocation>
+      <CollectionContent />
+      <ID>9a7a87ca-4692-4f6d-996d-3130b83b9d7c</ID>
+      <IsCollectionFiltered>false</IsCollectionFiltered>
+      <MasterETag i:nil="true" />
+      <Name>MapCollection</Name>
+      <OrderFilterIDList xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+      <RelativeLocation>AaltoGlobalImpact.OIP/MapCollection/9a7a87ca-4692-4f6d-996d-3130b83b9d7c</RelativeLocation>
+      <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+    </MapByLocation>
+    <MasterETag i:nil="true" />
+    <Name>MapIndexCollection</Name>
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/MapIndexCollection/3277b9a7-8c2c-4fcb-b975-63c0df5a9b4c</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MapIndexCollection>
+  <MapMarkers>
+    <CollectionContent />
+    <ID>059dc450-6c8c-4d9f-9852-a7816b1f8f9b</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>MapMarkerCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/MapMarkerCollection/059dc450-6c8c-4d9f-9852-a7816b1f8f9b</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MapMarkers>
+  <MapResultCollection>
+    <CollectionContent />
+    <ID>100fbb64-9d74-426e-927d-849d91084693</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>MapResultCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>AaltoGlobalImpact.OIP/MapResultCollection/100fbb64-9d74-426e-927d-849d91084693</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MapResultCollection>
+  <MarkerSourceActivities>
+    <CollectionContent />
+    <ID>0f190369-ccef-4197-9e07-6c12f632e5b5</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>ActivityCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ActivityCollection/0f190369-ccef-4197-9e07-6c12f632e5b5</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MarkerSourceActivities>
+  <MarkerSourceBlogs>
+    <CollectionContent />
+    <ID>d3357a43-2141-4ef0-842b-8065657f8577</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>BlogCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/BlogCollection/d3357a43-2141-4ef0-842b-8065657f8577</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MarkerSourceBlogs>
+  <MarkerSourceLocations>
+    <CollectionContent />
+    <ID>f4a12041-587c-45c6-b1b6-653fe490c0dd</ID>
+    <IsCollectionFiltered>false</IsCollectionFiltered>
+    <MasterETag i:nil="true" />
+    <Name>AddressAndLocationCollection</Name>
+    <OrderFilterIDList xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+    <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/AddressAndLocationCollection/f4a12041-587c-45c6-b1b6-653fe490c0dd</RelativeLocation>
+    <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+  </MarkerSourceLocations>
+  <MasterETag i:nil="true" />
+  <Name>MapContainer</Name>
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/MapContainer/default</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</MapContainer>

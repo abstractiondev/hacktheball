@@ -3,10 +3,10 @@
         <button type="button" class="btn btn-filter" data-toggle="collapse" data-target=".isotope-sort">Filter</button>
         <ul class="isotope-sort categories">
             <li class="isotope-sort-item"><a href="#" id="TileDefaultFilter" class=" badge all active " data-filter="">All</a></li>
-            <li class="isotope-sort-item"><a href="#"  class="badge news" data-filter=".OurStory">Our Story</a></li>
-            <li class="isotope-sort-item"><a href="#"  class="badge projects" data-filter=".Projects">Projects</a></li>
-            <li class="isotope-sort-item"><a href="#"  class="badge products" data-filter=".ProductsAndSolutions">Products And Solutions</a></li>
-            <li class="isotope-sort-item"><a href="#"  class="badge maps" data-filter=".Maps">Maps</a></li>
+            <li class="isotope-sort-item"><a href="#"  class="badge events" data-filter=".Events">Events</a></li>
+            <li class="isotope-sort-item"><a href="#"  class="badge developers" data-filter=".Developers">Developers</a></li>
+            <li class="isotope-sort-item"><a href="#"  class="badge spectators" data-filter=".Spectators">Spectators</a></li>
+            <li class="isotope-sort-item"><a href="#"  class="badge sponsors" data-filter=".Sponsors">Sponsors</a></li>
             <li class="isotope-sort-item"><a href="#"  class="badge about" data-filter=".About">About</a></li>
         </ul>
     </div>

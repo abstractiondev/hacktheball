@@ -1,0 +1,9 @@
+﻿<ContactOipContainer xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/AaltoGlobalImpact.OIP">
+  <ID>0bca88c3-28e6-4e25-ad82-eed124a823eb</ID>
+  <MasterETag i:nil="true" />
+  <Name>ContactOipContainer</Name>
+  <OIPModeratorGroupID i:nil="true" />
+  <OwnerID>00000000-0000-0000-0000-000000000000</OwnerID>
+  <RelativeLocation>grp/fff483ed-f45e-419e-8e3a-99f48d2f4fa8/AaltoGlobalImpact.OIP/ContactOipContainer/default</RelativeLocation>
+  <SemanticDomainName>AaltoGlobalImpact.OIP</SemanticDomainName>
+</ContactOipContainer>
