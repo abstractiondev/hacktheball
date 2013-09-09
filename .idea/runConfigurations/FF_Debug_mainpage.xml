@@ -4,6 +4,8 @@
       <option name="engineId" value="firefox" />
       <option name="fileUrl" value="http://localhost:63342/hacktheballweb/UI/hacktheballwebsite/html/index.html" />
     </JSRemoteDebuggerConfigurationSettings>
+    <RunnerSettings RunnerId="JavascriptDebugRunner" />
+    <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
     <method />
   </configuration>
 </component>
